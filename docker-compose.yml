@@ -10,7 +10,7 @@ services:
     ports:
       - 10000:8888
     volumes:
-      - jupyter_notebook_data:/home/jovyan/work
+      - ./notebook:/home/jovyan/work
 volumes:
   mongodb_data:
   jupyter_notebook_data:
