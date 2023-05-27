@@ -4,13 +4,10 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - mongodb_data:/data/db
+      - ./db:/data/db
   jupyter-notebook:
     image: jupyter/datascience-notebook:latest
     ports:
       - 10000:8888
     volumes:
       - ./notebook:/home/jovyan/work
-volumes:
-  mongodb_data:
-  jupyter_notebook_data:
